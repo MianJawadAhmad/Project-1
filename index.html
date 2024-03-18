@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
   <head>
     <title>HTML Code Viewer</title>
     <link rel="stylesheet" href="style.css" />
@@ -7,7 +8,7 @@
     <div id="content">
       <h1>Welcome</h1>
       <p>
-        This website is designed for begineers, you can check your code with
+        This website is designed for beginners, you can check your code with
         instant preview.
       </p>
     </div>
@@ -18,13 +19,13 @@
         <textarea
           id="HTMLInput"
           oninput="showOutput()"
-          placeholder="Type HTML code here..."
+          placeholder="Type HTML code here...Example: <h1>Hello World..!!!</h1>"
         ></textarea>
       </div>
       <div class="output-box">
         <label for="outputContent"><h2>Output:</h2></label>
         <div id="outputContent" class="placeholder">
-         
+          Your output shown here...
         </div>
       </div>
     </div>
@@ -34,11 +35,8 @@
         const HTMLInput = document.getElementById("HTMLInput").value;
         const outputContent = document.getElementById("outputContent");
 
-   
-        if{
-          outputContent.innerHTML = HTMLInput;
-          outputContent.classList.remove("placeholder");
-        }
+        outputContent.innerHTML = HTMLInput || "Your output shown here...";
+        outputContent.classList.remove("placeholder");
       }
     </script>
 
