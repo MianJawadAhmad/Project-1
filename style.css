@@ -27,6 +27,8 @@ body {
     order: 2;
   }
   
+
+  
   .box {
 
     width: 100%;
@@ -58,7 +60,7 @@ body {
     border-radius: 5px;
     height: 600px;
     background-color: #000;
-    color: #fff;
+    color: gray;
 }
 
 
