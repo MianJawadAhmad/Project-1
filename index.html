@@ -1,12 +1,50 @@
-<html>
+<!DOCTYPE html>
+  <head>
+    <title>HTML Code Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>Welcome</h1>
+      <p>
+        This website is designed for begineers, you can check your code with
+        instant preview.
+      </p>
+    </div>
 
+    <div class="container">
+      <div class="input-box">
+        <label for="HTMLInput"><h2>HTML Code:</h2></label>
+        <textarea
+          id="HTMLInput"
+          oninput="showOutput()"
+          placeholder="Type HTML code here..."
+        ></textarea>
+      </div>
+      <div class="output-box">
+        <label for="outputContent"><h2>Output:</h2></label>
+        <div id="outputContent" class="placeholder">
+         
+        </div>
+      </div>
+    </div>
 
-    <body>
-        <h1>
-            ABX XYZ
-        </h1>
-        <h1>
-            ABC
-        </h1>
-    </body>
+    <script>
+      function showOutput() {
+        const HTMLInput = document.getElementById("HTMLInput").value;
+        const outputContent = document.getElementById("outputContent");
+
+        // Check if HTMLInput is empty
+        if (HTMLInput.trim() === "") {
+          outputContent.innerHTML = "Your Output will shown here....";
+          outputContent.classList.add("placeholder");
+        } else {
+          outputContent.innerHTML = HTMLInput;
+          outputContent.classList.remove("placeholder");
+        }
+      }
+    </script>
+
+    <footer>2024 &copy; Website Designed & Developed By Mukesh Kumar</footer>
+  </body>
 </html>
