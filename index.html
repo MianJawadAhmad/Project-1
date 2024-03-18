@@ -35,10 +35,7 @@
         const outputContent = document.getElementById("outputContent");
 
         // Check if HTMLInput is empty
-        if (HTMLInput.trim() === "") {
-          outputContent.innerHTML = "Your Output will shown here....";
-          outputContent.classList.add("placeholder");
-        } else {
+        if{
           outputContent.innerHTML = HTMLInput;
           outputContent.classList.remove("placeholder");
         }
